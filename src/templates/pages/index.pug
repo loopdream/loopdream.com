@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block content
+  
+  header.header
+    img.header__profile-image(src=profileImage)
+    h1.header__title=heading
+    h2.header__subtitle=subHeading
+    .header__statement=statement 
+    ul.header__channels
+      each val in channels
+        li
+          a(href=val.href)=val.name 
+
