@@ -1,15 +1,14 @@
 doctype html
 html
   head
-    title=title
-    meta(name='description', content=meta.description)
-    meta(property="og:title", content=meta.og.title)
-    meta(property="og:description", content=meta.og.description)
-    meta(property="og:image", content=meta.og.image)
-    if googlefont
-      link(href=googlefont, rel='stylesheet')
+    title=base.title
+    meta(name='description', content=base.meta.description)
+    meta(property="og:title", content=base.meta.og.title)
+    meta(property="og:description", content=base.meta.og.description)
+    meta(property="og:image", content=base.meta.og.image)
+    if base.googlefont
+      link(href=base.googlefont, rel='stylesheet')
     link(rel='stylesheet', href='/assets/styles/main' + (locals.minify ? '.min' : '') + '.css')
   body
     block content
-
     script(src='/assets/scripts/main' + (locals.minify ? '.min' : '') + '.js')

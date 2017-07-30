@@ -1,10 +1,10 @@
-var browserSync     = require('browser-sync').create();
-var reload          = browserSync.reload;
+let browserSync     = require('browser-sync').create();
+let reload          = browserSync.reload;
 
-module.exports = (gulp, config, $) => {
+module.exports = (gulp, config, $, data) => {
     return () => {
-    	
-    	var stream = gulp.src([config.paths.srcStyles  + '/main.scss'])
+
+    	let stream = gulp.src([config.paths.srcStyles  + '/main.scss'])
     	    .pipe($.plumber({
     	        handleError: function (err) {
     	            console.log(err);
@@ -14,7 +14,7 @@ module.exports = (gulp, config, $) => {
     	    .pipe($.sourcemaps.init())
     	    .pipe($.sass({
     	        includePaths: [
-    	          require('node-bourbon').includePaths, 
+    	          require('node-bourbon').includePaths,
     	          require('node-neat').includePaths
     	        ]
     	    }))

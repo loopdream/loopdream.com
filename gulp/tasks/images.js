@@ -1,7 +1,7 @@
-module.exports = (gulp, config, $) => {
+module.exports = (gulp, config, $, data) => {
     return () => {
-        
-    	var stream = gulp.src([config.paths.srcImages + '/**/*'])
+
+    	let stream = gulp.src([config.paths.srcImages + '/**/*'])
         .pipe($.plumber({
             handleError: function (err) {
                 console.log(err);
@@ -13,6 +13,6 @@ module.exports = (gulp, config, $) => {
         .pipe($.bs.reload({stream:true}));
 
     	return stream;
-        
+
     };
 };

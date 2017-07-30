@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.12",
+    "deep-extend-stream": "^3.0.0",
     "es6-promise": "^4.1.0",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
@@ -38,6 +39,7 @@
     "path": "^0.12.7",
     "pug": "^2.0.0-rc.2",
     "run-sequence": "^1.2.2",
+    "vinyl-yaml-data": "^2.0.1",
     "yargs": "^8.0.2"
   },
   "scripts": {

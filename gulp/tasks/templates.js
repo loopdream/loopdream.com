@@ -1,18 +1,10 @@
-module.exports = (gulp, config, $) => {
-    
+module.exports = (gulp, config, $, data) => {
+
     return () => {
-
-        var readYamlFile = (file) => {
-
-          var dataFile = config.paths.data + file;
-          return $.fs.existsSync(dataFile) ? $.yaml.safeLoad($.fs.readFileSync(dataFile, 'utf8')) : {};
-        };
-
-        var data = readYamlFile('/global.yaml');
-        var templateData = Object.assign(config, data);
-
+        // merge config with data
+        let templateData = Object.assign(config, data);
         /* Insert any specific data manipulatiopn here */
-    	   var stream = gulp.src([config.paths.templates + '/**/*.pug'])
+    	  let stream = gulp.src([config.paths.templates + '/**/*.pug'])
         .pipe($.plumber({
             handleError: function (err) {
                 console.log(err);

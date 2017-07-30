@@ -1,4 +1,10 @@
-$font-primary: 'Roboto', helvetica, sans-serif;
 
+// fonts
+$font-primary: 'Lato', helvetica, sans-serif;
+
+// breakpoints
+$grid-breakpoints: (xxs: 0, xs: 321px, sm: 576px, md: 769px, lg: 992px, xl: 1200px, xxl: 1441px) !default;
+
+// colours
 $colour-background: black;
-$colour-font-main: #ebebeb;
+$colour-font-main: white;

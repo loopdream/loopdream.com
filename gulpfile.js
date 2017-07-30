@@ -1,5 +1,7 @@
 const gulp = require('gulp');
-
+const vinylYamlData = require('vinyl-yaml-data');
+const deepExtend = require('deep-extend-stream');
+let data;
 /* Create a global object of gulp + node plugins */
 const $ = Object.assign({
   bs:     require('browser-sync').create(),
@@ -7,7 +9,7 @@ const $ = Object.assign({
   argv:   require('yargs').argv,
   fs:     require('fs'),
   yaml:   require('js-yaml'),
-  _:      require('lodash'),
+  lodash: require('lodash'),
   oMerge: require('object-merge')
 }, require('gulp-load-plugins')());
 
@@ -19,8 +21,9 @@ const config = {
   minify: $.argv.minify || false,
   paths: {
     src: './src',
-    dist: './dist', 
+    dist: './dist',
     data: './src/data',
+    gulpTasks: './gulp/tasks',
     templates: './src/templates/pages',
     srcImages: './src/assets/images',
     srcStyles: './src/assets/styles',
@@ -31,24 +34,27 @@ const config = {
   }
 }
 
-function getTask(task) {
-  return require('./gulp/tasks/' + task)(gulp, config, $);
+let setDataObject = () => {
+  data = {};
+  return gulp.src(config.paths.data + '/**/*.y{,a}ml')
+    .pipe(vinylYamlData())
+    .pipe(deepExtend(data));
 }
 
-const tasks = [
-  'clean',
-  'styles',
-  'scripts',
-  'templates',
-  'images',
-  'watch'
-];
+//  Load Tasks
+let loadTask = (task) => {
+  return require(config.paths.gulpTasks + task)(gulp, config, $, data);
+}
 
-$._.each(tasks, (task, i) => {
-  gulp.task(task, getTask(task));
-});
+setDataObject();
+gulp.task('clean', loadTask('/clean'));
+gulp.task('styles', loadTask('/styles'));
+gulp.task('scripts', loadTask('/scripts'));
+gulp.task('templates', loadTask('/templates'));
+gulp.task('images', loadTask('/images'));
+gulp.task('watch', loadTask('/watch'));
 
-
+//  Build & Serve on localhost:3000
 gulp.task('dev', (cb) => {
   $.rs(
     'default',
@@ -57,7 +63,7 @@ gulp.task('dev', (cb) => {
   );
 });
 
-
+// Build site
 gulp.task('default', (cb) => {
   $.rs(
     'clean',
