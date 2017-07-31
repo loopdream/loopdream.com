@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   color: $colour-font-main;
+  background-color: $colour-background;
 }
 
 a, a:hover, a:visited, a:focus {
@@ -13,9 +14,18 @@ a, a:hover, a:visited, a:focus {
   text-decoration: none;
 }
 
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+p {
+  line-height: 1.7em;
+}
+
 header, section {
   position: relative;
   z-index: 2;
+  padding: 20px;
 }
 
 .background-image {

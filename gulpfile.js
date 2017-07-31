@@ -166,7 +166,7 @@ gulp.task('watch', (cb) => {
 });
 
 
-//  Build & Serve on localhost:3000
+//  Build to ./dist & Serve on localhost:3000
 gulp.task('dev', (cb) => {
   runSequence(
     'default',
@@ -175,7 +175,7 @@ gulp.task('dev', (cb) => {
   );
 });
 
-// Build site
+// Build site to ./dist
 gulp.task('default', (cb) => {
   runSequence(
     'clean',
