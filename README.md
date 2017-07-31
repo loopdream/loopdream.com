@@ -4,7 +4,7 @@
 
 1. [Overview](#overview)
 2. [Running the project](#running-the-project)
-3. TBC
+3. [Deployment](#deployment)
 
 ## Overview
 Personal website.
@@ -17,4 +17,4 @@ Personal website.
 - Pass the `--minify` flag to gulp commands to optimise all assets and files. For use on project-item__description
 
 ## Deployment
-[Netlify](https://netlify.com/) :) 
+[Netlify](https://netlify.com/) :)
