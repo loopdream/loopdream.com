@@ -3,13 +3,18 @@
 ## Index
 
 1. [Overview](#overview)
-2. [Running the project](#running-the-project)
-3. [Deployment](#deployment)
+2. [Requirements](#requirements)
+3. [Running the project](#running-the-project)
+4. [Deployment](#deployment)
 
 ## Overview
 Personal website.
 
-# Running the project
+## Requirements
+- Node
+- Gulp
+
+## Running the project
 - Clone the repo
 - `npm i` Install dependancies
 - `gulp` runs all gulp tasks and builds site to `./dist` folder
