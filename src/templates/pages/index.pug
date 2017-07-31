@@ -2,26 +2,26 @@ extends ../layouts/default
 
 block content
 
-  //- div.background-image
-  //-   img(src=profile.bgImage)
+  div.background-image
+    img(src=profile.bgImage)
 
   header.profile
-    img.profile__image(src=profile.profileImage)
+    // img.profile__image(src=profile.profileImage)
     h1.profile__title=profile.title
     h2.profile__subtitle=profile.subtitle
-    div.profile__statement=!profile.statement 
+    div.profile__statement!=profile.statement 
     ul.profile__channels
       each val in profile.channels
         li
           a(href=val.href)=val.name 
           
-  section.projects
+  section.work
     h2 Work
-    ul.project-list
+    ul.projects
       each project in projects
-        li.project-item
-          a.project-item__link(href=project.url)
-            h3.project-item__title=project.title
-            h4.project-item__title=project.client
-            p.project-item__description=project.description
+        li.project
+          a.project__link(href=project.url, target='_blank')
+            h3.project__title=project.title
+            h4.project__client=project.client
+            p.project__description=project.description
     

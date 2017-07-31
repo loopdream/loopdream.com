@@ -9,22 +9,8 @@ const jsYaml = require('js-yaml');
 const lodash = require('lodash');
 const oMerge = require('object-merge');
 const $ = require('gulp-load-plugins')();
-
 require('es6-promise').polyfill();
-
-let data;
-/* Create a global object of gulp + node plugins */
-// const $ = Object.assign({
-//   bs:     require('browser-sync').create(),
-//   rs:     require('run-sequence'),
-//   argv:   require('yargs').argv,
-//   fs:     require('fs'),
-//   yaml:   require('js-yaml'),
-//   lodash: require('lodash'),
-//   oMerge: require('object-merge')
-// }, require('gulp-load-plugins')());
-
-
+let templateData;
 
 const config = {
   defaultPort: 3000,
@@ -46,11 +32,11 @@ const config = {
 }
 
 
-gulp.task('data', (cb) => {
-  data = {};
+gulp.task('templateData', (cb) => {
+  templateData = {};
   let stream = gulp.src(config.paths.data + '/**/*.y{,a}ml')
     .pipe(vinylYamlData())
-    .pipe(deepExtend(data));
+    .pipe(deepExtend(templateData));
   return stream;
 });
 
@@ -134,10 +120,8 @@ gulp.task('styles', (cb) => {
 });
 
 
-
-
-gulp.task('templates', ['data'], (cb) => {
-  let templateData = Object.assign(config, data);
+gulp.task('templates', ['templateData'], (cb) => {
+  let oData = Object.assign(config, templateData);
   /* Insert any specific data manipulatiopn here */
   let stream = gulp.src([config.paths.templates + '/**/*.pug'])
     .pipe($.plumber({
@@ -146,7 +130,7 @@ gulp.task('templates', ['data'], (cb) => {
             this.emit('end');
         }
     }))
-    .pipe($.pug({pretty: true, data: templateData}))
+    .pipe($.pug({pretty: true, data: oData}))
     .pipe($.if(config.minify, $.minifyHtml()))
     .pipe(gulp.dest(config.paths.dist))
     .pipe(browserSync.reload({stream:true}));

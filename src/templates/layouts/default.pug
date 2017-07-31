@@ -2,12 +2,19 @@ doctype html
 html
   head
     title=base.title
-    meta(name='description', content=base.meta.description)
-    meta(property="og:title", content=base.meta.og.title)
-    meta(property="og:description", content=base.meta.og.description)
-    meta(property="og:image", content=base.meta.og.image)
+    if base.description
+      meta(name='description', content=base.meta.description)
+    //- Open Graph
+    if base.meta.og.title
+      meta(property="og:title", content=base.meta.og.title)
+    if base.meta.og.description
+      meta(property="og:description", content=base.meta.og.description)
+    if base.meta.og.image
+      meta(property="og:image", content=base.meta.og.image)
+    //- Google fonts
     if base.googlefont
       link(href=base.googlefont, rel='stylesheet')
+    //- stylesheets
     link(rel='stylesheet', href='/assets/styles/main' + (locals.minify ? '.min' : '') + '.css')
   body
     block content

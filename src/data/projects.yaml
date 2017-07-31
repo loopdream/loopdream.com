@@ -1,10 +1,60 @@
 - title: Searching for Syria
   agency: R/GA
-  client: Google with UNHCR
+  client: Google (in partnership with UNHCR)
   url: https://searchingforsyria.org
-  description: some blurb
-- title: Year in Search 2014
+  description:  Exploring five of the most common search queries that people around the world are asking about the Syrian refugee crisis.
+  technology:
+- title: Year In Search 2014
   agency: R/GA
   client: Google
   url: https://www.google.com/trends/2014/
+  description: Telling the story of 2014 through the searches made around the world.
+  technology:
+- title: Samsung S8 Messenger Bot
+  agency: R/GA
+  client: Samsung
+  url: https://www.messenger.com/t/SamsungMobile
   description: some blurb
+  technology:
+- title: Samsung Galaxy 11
+  agency: R/GA
+  client: Samsung
+  url: https://www.rga.com/work/case-studies/samsung-galaxy-11
+  description: some blurb
+  technology:
+- title: The Feed
+  agency: R/GA
+  client: Getty Images
+  url: http://www.thedrum.com/news/2014/02/18/international-olympic-committee-adopts-feed-getty-images-facebook-posts
+  description: some blurb
+  technology:
+- title: Magnum Ice-cream
+  agency: R/GA
+  client: Unilever
+  url: http://www.magnumicecream.com
+  description: some blurb
+  technology:
+- title: Happy Studio
+  agency: R/GA
+  client: McDonald's
+  url: http://happystudio.com/gb/en
+  description: some blurb
+  technology:
+- title: The Sub
+  agency: R/GA
+  client: Heineken
+  url: https://global.the-sub.com
+  description: some blurb
+  technology:
+- title: Beats by Dre
+  agency: R/GA
+  client: '#showYourColor'
+  url: https://www.rga.com/work/case-studies/showyourcolor
+  description: some blurb
+  technology:
+- title: Open Sesame
+  agency: R/GA
+  client: Pearson
+  url: '#'
+  description: some blurb
+  technology:
