@@ -4,11 +4,38 @@
 // Oxygen
 // Signika
 
-$font-primary: 'Inconsolata', helvetica, sans-serif;
+$fonts: (
+  primary: "Inconsolata",
+  secondary: "Inconsolata"
+);
+$font-primary: map-get($fonts, primary);
+$font-secondary: map-get($fonts, secondary);
+$font-fallbacks: helvetica, sans-serif;
 
 // breakpoints
 $grid-breakpoints: (xxs: 0, xs: 321px, sm: 576px, md: 769px, lg: 992px, xl: 1200px, xxl: 1441px) !default;
 
 // colours
-$colour-background: black;
-$colour-font-main: white;
+$color-palette: (
+  white: #FFFFFF,
+  black: #000000,
+  primary: #011627,
+  secondary: #FDFFFC,
+  tertiary: #2EC4B6,
+  quaternary: #E71D36,
+  quinary: #FF9F1C
+);
+
+// base colours
+$colour-background: map-get($color-palette, black);
+$colour-font-main: map-get($color-palette, white);
+
+// profile colours
+$colour-profile-background: transparent;
+
+// work colours
+$colour-work-background: map-get($color-palette, secondary);
+$colour-font-work: map-get($color-palette, primary);
+$colour-font-work-title: map-get($color-palette, tertiary);
+$colour-font-work-client: map-get($color-palette, quaternary);
+$colour-font-work-desc: $colour-font-work;

@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: $font-primary;
+  font-family: $font-primary, $font-fallbacks;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -9,10 +9,11 @@ body {
   background-color: $colour-background;
   letter-spacing: .4px;
   font-size: 16px;
+  font-weight: 300;
 }
 
 a, a:hover, a:visited, a:focus {
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -26,6 +27,15 @@ header, section {
   position: relative;
   z-index: 2;
   padding: 20px;
+}
+
+main {
+  position: absolute;
+  top: 0;
+}
+
+canvas#projector {
+  // opacity: .4;
 }
 
 .background-image {

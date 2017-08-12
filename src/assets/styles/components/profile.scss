@@ -1,8 +1,11 @@
 
 .profile {
   //text-transform: uppercase;
+  background-color: $colour-profile-background;
+  margin-top: 150px;
 }
 .profile__image {
+  display: none;
   width: 130px;
   border-radius: 50%;
   border: 5px solid #ebebeb;
@@ -10,14 +13,20 @@
 }
 .profile__title {
   //text-transform: uppercase;
-  font-weight: 600;
+  font-size: 40px;
+  font-weight: 100;
 }
 .profile__subtitle {
   //text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 1.1;
+  // color: #ff0000;
 }
 .profile__statement p {
   font-weight: 300;
+  font-size: 20px;
   text-transform: none;
+
 }
-.profile__channe4ls {}
+.profile__channels {}

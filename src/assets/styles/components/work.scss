@@ -1,10 +1,35 @@
 .work {
-  background-color: rgba(black, .6);
+  background-color: $colour-work-background;
+  // border-top: 10px $colour-font-main solid;
+  * {
+    color: $colour-font-work;
+  }
 }
 
+.work__heading {
+  font-weight: 100;
+  display: none;
+}
 .projects {}
-.project {}
-.project__title {}
-.project__client {}
-.project__link {}
-.project__descripton {}
+.project {
+  margin-top: 30px;
+}
+
+.project__title {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $colour-font-work-title;
+}
+.project__client {
+  font-weight: 500;
+  color: $colour-font-work-client;
+}
+a.project__link {
+  // color: $colour-font-work;
+}
+.project__description {
+  text-transform: none;
+  //margin: 10px 0 0 20px;
+  color: $colour-font-work-desc;
+  //display: none;
+}

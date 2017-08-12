@@ -14,7 +14,13 @@
   agency: R/GA
   client: Samsung
   url: https://www.messenger.com/t/SamsungMobile
-  description: some blurb
+  description: A customer service bot platform to support the high profile launch of Samsung's S8 device.
+  technology:
+- title: Dyson.com
+  agency: R/GA
+  client: Dyson
+  url: https://www.dyson.co.uk/en.html
+  description:
   technology:
 - title: Samsung Galaxy 11
   agency: R/GA
