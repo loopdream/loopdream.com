@@ -5,15 +5,37 @@
 // Signika
 
 $fonts: (
-  primary: "Inconsolata",
-  secondary: "Inconsolata"
+  primary: "Lato",
+  secondary: "Lato"
 );
+
 $font-primary: map-get($fonts, primary);
 $font-secondary: map-get($fonts, secondary);
 $font-fallbacks: helvetica, sans-serif;
 
 // breakpoints
-$grid-breakpoints: (xxs: 0, xs: 321px, sm: 576px, md: 769px, lg: 992px, xl: 1200px, xxl: 1441px) !default;
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 321px,
+  sm: 576px,
+  md: 769px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1441px
+) !default;
+
+// layout
+$layout: (
+  profile-inner-padding: 0,
+  profile-inner-margin: 0,
+  profile-width-md: 40%,
+  work-width-md: 40%,
+  projects-ul-padding: 0,
+  projects-li-padding: 0
+);
+
+$profile-width-md: map-get($layout, profile-width-md);
+$work-width-md: map-get($layout, work-width-md);
 
 // colours
 $color-palette: (
@@ -27,8 +49,8 @@ $color-palette: (
 );
 
 // base colours
-$colour-background: map-get($color-palette, black);
-$colour-font-main: map-get($color-palette, white);
+$colour-background: map-get($color-palette, primary);
+$colour-font-main: map-get($color-palette, secondary);
 
 // profile colours
 $colour-profile-background: transparent;

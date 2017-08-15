@@ -5,12 +5,11 @@ html
     if base.description
       meta(name='description', content=base.meta.description)
     //- Open Graph
-    if base.meta.og.title
-      meta(property="og:title", content=base.meta.og.title)
-    if base.meta.og.description
-      meta(property="og:description", content=base.meta.og.description)
-    if base.meta.og.image
-      meta(property="og:image", content=base.meta.og.image)
+    each val, index in base.meta.og
+      meta(property="og:" + index, content=val)
+    //- Twitter
+    each val, index in base.meta.twitter
+      meta(property="twitter:" + index, content=val)
     //- Google fonts
     if base.googlefont
       link(href=base.googlefont, rel='stylesheet')

@@ -1,8 +1,14 @@
-title: Loopdream.com // Dominic Geargeoura // Creative Technologist
+title: Dominic Geargeoura // Creative developer & Tech Lead
 googlefont: https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,500,700,900|Lato:100,300,400,700,900|Inconsolata:400,700|Oxygen:300,400,700|Signika:300,400,600,700
 meta:
   description: An experienced and motivated full-stack developer and technical lead with a design background specialising in delivering award-winning work.
   og:
-    title: Loopdream.com // Dominic Geargeoura // Creative Technologist
+    title: Dominic Geargeoura // Creative Technologist
     description: An experienced and motivated full-stack developer and technical lead with a design background specialising in delivering award-winning work.
-    image: /assets/images/seneca.jpg
+    url: https://loopdream.com
+    image: ''
+  twitter:
+    title: Dominic Geargeoura // Creative Technologist
+    description: An experienced and motivated full-stack developer and technical lead with a design background specialising in delivering award-winning work.
+    url: https://loopdream.com
+    image: ''

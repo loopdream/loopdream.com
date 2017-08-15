@@ -9,6 +9,7 @@ const jsYaml = require('js-yaml');
 const lodash = require('lodash');
 const oMerge = require('object-merge');
 const $ = require('gulp-load-plugins')();
+const marked = require('marked');
 require('es6-promise').polyfill();
 let templateData;
 
@@ -130,7 +131,7 @@ gulp.task('templates', ['templateData'], (cb) => {
             this.emit('end');
         }
     }))
-    .pipe($.pug({pretty: true, data: oData}))
+    .pipe($.pug({locals: { marked: marked }, data: oData}))
     .pipe($.if(config.minify, $.minifyHtml()))
     .pipe(gulp.dest(config.paths.dist))
     .pipe(browserSync.reload({stream:true}));

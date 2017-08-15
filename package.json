@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "jstransformer-markdown-it": "^2.0.0",
+    "marked": "^0.3.6"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "deep-extend-stream": "^3.0.0",
@@ -44,7 +47,7 @@
     "yargs": "^8.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC"

@@ -4,15 +4,23 @@
   * {
     color: $colour-font-work;
   }
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    width: $work-width-md;
+    top: 0;
+    right: 0;
+  }
 }
 
 .work__heading {
   font-weight: 100;
   display: none;
 }
+
 .projects {}
 .project {
-  margin-top: 30px;
+  // margin-top: 30px;
 }
 
 .project__title {
@@ -20,6 +28,7 @@
   text-transform: uppercase;
   color: $colour-font-work-title;
 }
+
 .project__client {
   font-weight: 500;
   color: $colour-font-work-client;

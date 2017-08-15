@@ -2,8 +2,16 @@
 .profile {
   //text-transform: uppercase;
   background-color: $colour-profile-background;
-  margin-top: 150px;
+  // margin-top: 150px;
+  @include media-breakpoint-up(lg) {
+    position: fixed;
+    height: 100%;
+    width: $profile-width-md;
+    top: 0;
+    left: 0;
+  }
 }
+
 .profile__image {
   display: none;
   width: 130px;
@@ -21,7 +29,6 @@
   font-weight: 900;
   font-size: 40px;
   line-height: 1.1;
-  // color: #ff0000;
 }
 .profile__statement p {
   font-weight: 300;

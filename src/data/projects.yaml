@@ -2,7 +2,7 @@
   agency: R/GA
   client: Google (in partnership with UNHCR)
   url: https://searchingforsyria.org
-  description:  Exploring five of the most common search queries that people around the world are asking about the Syrian refugee crisis.
+  description:  Exploring the top five search queries that people are asking about the Syrian refugee crisis.
   technology:
 - title: Year In Search 2014
   agency: R/GA
@@ -20,47 +20,47 @@
   agency: R/GA
   client: Dyson
   url: https://www.dyson.co.uk/en.html
-  description:
+  description: Atomic design styleguide and reference code for the build of the new Dyson ecommerce website.
   technology:
 - title: Samsung Galaxy 11
   agency: R/GA
   client: Samsung
   url: https://www.rga.com/work/case-studies/samsung-galaxy-11
-  description: some blurb
+  description: Marketing campaign inviting football fans to unite and join the excitement of the ultimate match.
   technology:
 - title: The Feed
   agency: R/GA
   client: Getty Images
   url: http://www.thedrum.com/news/2014/02/18/international-olympic-committee-adopts-feed-getty-images-facebook-posts
-  description: some blurb
+  description: A service for automating the real-time population of image content to the client's social feeds. Used on the IOC's offical facebook page during the London 2012 Olympics.
   technology:
 - title: Magnum Ice-cream
   agency: R/GA
   client: Unilever
   url: http://www.magnumicecream.com
-  description: some blurb
+  description: Webhub resdesign and build for the premium icecream brand. Built on top of AEM.
   technology:
 - title: Happy Studio
   agency: R/GA
   client: McDonald's
   url: http://happystudio.com/gb/en
-  description: some blurb
+  description: Website companion for the Happy Studio app - a purposeful play resource that encourages children to think, make, and grow.
   technology:
 - title: The Sub
   agency: R/GA
   client: Heineken
   url: https://global.the-sub.com
-  description: some blurb
+  description: Feature rich web and commerce hub promoting Heineken's premium home draught system.
   technology:
 - title: Beats by Dre
   agency: R/GA
   client: '#showYourColor'
   url: https://www.rga.com/work/case-studies/showyourcolor
-  description: some blurb
+  description:  Disruptive experiential and social campaign during the London 2012 Olympics promoting the launch of Beats new coloured headphones.
   technology:
 - title: Open Sesame
   agency: R/GA
   client: Pearson
   url: '#'
-  description: some blurb
+  description: Interactive tool for creating custom learning literature build to enterprise level with extensive backend APIs and interactive drag-and-drop user interfaces.
   technology:
