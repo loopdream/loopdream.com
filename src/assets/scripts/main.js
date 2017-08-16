@@ -28,7 +28,7 @@ function Initialize() {
 	// canvas.addEventListener('mousemove', MouseMove, false);
 	// window.addEventListener('mousedown', MouseDown, false);
 	window.addEventListener('resize', ResizeCanvas, false);
-	setInterval( TimeUpdate, 40 );
+	setInterval( TimeUpdate, 50 );
 
 	ResizeCanvas();
 }
