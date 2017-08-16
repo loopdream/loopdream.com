@@ -25,8 +25,6 @@
   }
 }
 
-
-
 .profile__image {
   //display: none;
   width: 130px;
@@ -34,21 +32,24 @@
   border: 5px solid #ebebeb;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, .3);
 }
+
 .profile__title {
   //text-transform: uppercase;
   font-size: 40px;
   font-weight: 100;
 }
+
 .profile__subtitle {
   //text-transform: uppercase;
   font-weight: 900;
   font-size: 40px;
   line-height: 1.1;
 }
+
 .profile__statement p {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 26px;
   text-transform: none;
-
 }
+
 .profile__channels {}

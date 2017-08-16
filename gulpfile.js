@@ -11,12 +11,14 @@ const oMerge = require('object-merge');
 const $ = require('gulp-load-plugins')();
 const marked = require('marked');
 require('es6-promise').polyfill();
+require('dotenv').config();
 let templateData;
 
 const config = {
   defaultPort: 3000,
   environment: argv.environment || 'local',
   minify: argv.minify || false,
+  gaTrackingId: process.env.GA_TRACKING_ID,
   paths: {
     src: './src',
     dist: './dist',

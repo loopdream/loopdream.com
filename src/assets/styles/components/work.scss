@@ -1,8 +1,8 @@
 .work {
-  opacity: .9;
+  //opacity: .9;
   background-color: $colour-work-background;
   text-align: center;
-  // border-top: 10px $colour-font-main solid;
+  // border-left: 10px white solid;
   color: $colour-font-work;
   @include media-breakpoint-up(lg) {
     position: absolute;
@@ -21,11 +21,15 @@
   text-align: left;
   width: 80%;
   display: inline-block;
-  margin: 10% 0;
+  margin: 10% 0 ;
 }
 
 .project {
   // margin-top: 30px;
+  margin-top: 10%;
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .project__title {
@@ -40,10 +44,17 @@
 }
 a.project__link {
   // color: $colour-font-work;
+  &:after {
+    display: none;
+  }
 }
 .project__description {
   text-transform: none;
+  margin: 0;
   // margin: 2.5% 0 10% 5%;
   color: $colour-font-work-desc;
-  //display: none;
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: inline-block;
+  }
 }

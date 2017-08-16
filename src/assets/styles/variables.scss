@@ -49,15 +49,15 @@ $color-palette: (
 );
 
 // base colours
-$colour-background: map-get($color-palette, secondary);
-$colour-font-main: map-get($color-palette, primary);
+$colour-background: map-get($color-palette, primary);
+$colour-font-main: map-get($color-palette, secondary);
 
 // profile colours
 $colour-profile-background: transparent;
 
 // work colours
-$colour-work-background: map-get($color-palette, primary);
-$colour-font-work: map-get($color-palette, secondary);
+$colour-work-background: map-get($color-palette, secondary);
+$colour-font-work: map-get($color-palette, primary);
 $colour-font-work-title: map-get($color-palette, tertiary);
 $colour-font-work-client: map-get($color-palette, quaternary);
 $colour-font-work-desc: $colour-font-work;
