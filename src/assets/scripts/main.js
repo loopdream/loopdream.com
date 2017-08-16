@@ -3,7 +3,7 @@ var PARTICLES = 400;
 
 var mouse = {x:0, y:0};
 var particles = [];
-var colors = [ "#2EC4B6","#E71D36","#FF9F1C" ];
+var colors = [ "#eeeeee","#666666","#cccccc" ];
 var canvas = document.getElementById('projector');
 var context;
 
@@ -21,7 +21,7 @@ if (canvas && canvas.getContext) {
 		} );
 	}
 
-	//Initialize();
+	Initialize();
 }
 
 function Initialize() {

@@ -34,7 +34,7 @@ main {
 }
 
 canvas#projector {
-  // opacity: .4;
+  opacity: .4;
 }
 
 .background-image {
@@ -56,4 +56,11 @@ canvas#projector {
     min-height: 50%;
     // opacity: 1;
   }
+}
+
+#projector {
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 1;
 }

@@ -1,10 +1,9 @@
 .work {
+  opacity: .9;
   background-color: $colour-work-background;
+  text-align: center;
   // border-top: 10px $colour-font-main solid;
-  * {
-    color: $colour-font-work;
-  }
-
+  color: $colour-font-work;
   @include media-breakpoint-up(lg) {
     position: absolute;
     width: $work-width-md;
@@ -18,7 +17,13 @@
   display: none;
 }
 
-.projects {}
+.projects {
+  text-align: left;
+  width: 80%;
+  display: inline-block;
+  margin: 10% 0;
+}
+
 .project {
   // margin-top: 30px;
 }
@@ -38,7 +43,7 @@ a.project__link {
 }
 .project__description {
   text-transform: none;
-  //margin: 10px 0 0 20px;
+  // margin: 2.5% 0 10% 5%;
   color: $colour-font-work-desc;
   //display: none;
 }

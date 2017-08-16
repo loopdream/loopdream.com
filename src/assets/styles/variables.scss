@@ -28,7 +28,7 @@ $grid-breakpoints: (
 $layout: (
   profile-inner-padding: 0,
   profile-inner-margin: 0,
-  profile-width-md: 40%,
+  profile-width-md: 60%,
   work-width-md: 40%,
   projects-ul-padding: 0,
   projects-li-padding: 0
@@ -49,15 +49,15 @@ $color-palette: (
 );
 
 // base colours
-$colour-background: map-get($color-palette, primary);
-$colour-font-main: map-get($color-palette, secondary);
+$colour-background: map-get($color-palette, secondary);
+$colour-font-main: map-get($color-palette, primary);
 
 // profile colours
 $colour-profile-background: transparent;
 
 // work colours
-$colour-work-background: map-get($color-palette, secondary);
-$colour-font-work: map-get($color-palette, primary);
+$colour-work-background: map-get($color-palette, primary);
+$colour-font-work: map-get($color-palette, secondary);
 $colour-font-work-title: map-get($color-palette, tertiary);
 $colour-font-work-client: map-get($color-palette, quaternary);
 $colour-font-work-desc: $colour-font-work;
