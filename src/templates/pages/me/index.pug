@@ -30,6 +30,7 @@ block content
         each project in projects
           li.project
             a.project__link(href=project.url, target='_blank')
-              h3.project__title=project.title
               h4.project__client=project.client
+              h3.project__title=project.title
+              
               p.project__description=project.description
