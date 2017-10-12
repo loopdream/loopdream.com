@@ -10,6 +10,9 @@ const lodash = require('lodash');
 const oMerge = require('object-merge');
 const $ = require('gulp-load-plugins')();
 const marked = require('marked');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-buffer');
 require('es6-promise').polyfill();
 require('dotenv').config();
 let templateData;
@@ -66,14 +69,18 @@ gulp.task('images', (cb) => {
 
 
 gulp.task('scripts', (cb) => {
-  let stream = gulp.src([config.paths.srcScripts + '/**/*.js'])
+  let stream = browserify([config.paths.srcScripts + '/index.js'])
+    .transform(babelify.configure({
+      presets: ['es2015']
+    })).bundle()
+    .pipe(source('app.js'))
     .pipe($.plumber({
         handleError: function (err) {
             console.log(err);
             this.emit('end');
         }
     }))
-    .pipe($.concat('main.js'))
+    // .pipe($.concat('main.js'))
     .pipe($.jshint())
     .pipe($.jshint.reporter('default'))
     .pipe($.browserify())

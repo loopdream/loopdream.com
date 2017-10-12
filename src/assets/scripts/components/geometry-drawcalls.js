@@ -1,1 +1,3 @@
-// import Three from 'three';
+'use strict';
+
+import Three from 'three'; 
